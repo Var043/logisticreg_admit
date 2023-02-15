@@ -1,0 +1,137 @@
+
+ <!-- In the index.html file, create a form for users to input their GRE score, GPA, and rank.-->
+
+<!DOCTYPE html>
+<html><head>
+  <title>Stock Predictor</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#application">Application</a></li>
+    </ul>
+  </nav>
+</header>
+<br><br>
+<section id="home">
+  <h1><u>Welcome to Admission Prediction Application</u></h1>
+  <p>this is just a logictic regression implementation and data visualisation</p>
+</section>
+
+
+<section id="application">
+<!-- In the index.html file, create a form for users to input -->
+<div id="stock-box">
+  <embed id="img" src="https://thumbs.dreamstime.com/z/admission-word-cloud-concept-grey-background-90878637.jpg">
+
+<h1>Input Data for Predicting whether admit or not </h1>
+<div>
+  <form method="POST" action="{{url_for('predict')}}">
+    <input type="number" name="gre" placeholder="GRE" min="200" max="800">
+    <input type="number" name="gpa" placeholder="GPA" min="0" max="4" step="0.01">
+    <input type="number" name="rank" placeholder="Rank" min="0" max="4">
+    <input type="submit" value="Predict">
+  </form>
+  </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a Web Developer and enjoy creating beautiful and functional websites.</p>
+</section>
+<section id="services">
+  <h2>My Services</h2>
+  <ul>
+    <li>Web Design</li>
+    <li>Web Development</li>
+    <li>Data Analysts</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: viv...@gmail.com</p>
+  <p>Phone: +91 85** ******</p>
+</section>  
+
+<style>
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fac87c;
+    margin:5%;
+}
+
+#img{
+    /* width:70%; */
+    width: 90%;
+    padding-left:5%;
+    border-bottom: #111;
+}
+#home{
+    padding:3%;
+    color: rgb(36, 121, 121);
+}
+#about{
+    color: #209c24;
+}
+#services{
+    color:rgb(71, 30, 65);
+}
+header{
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li{
+    float: left;
+}
+
+nav a{
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: #111;
+}
+
+section{
+    padding: 1em;
+}
+
+#stock-box{
+    position: relative;
+    left: 25%;
+
+    background-color: aqua;
+    height: auto;
+    width: 250px;
+    border: solid;
+    border-width: 15px;
+
+    padding: 20px;
+    margin: 10px;
+
+}
+</style>
+</body>
+</html>
